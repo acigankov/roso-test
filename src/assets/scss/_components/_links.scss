@@ -1,0 +1,15 @@
+a, a:visited, a:active, a:link {
+  color: $text-black;
+  transition: $transition;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+a:focus {
+  opacity: 0.9;
+  text-decoration: underline
+;
+}

@@ -3,6 +3,10 @@ $container-width: 1920px;
 $accent-color: #34B553;
 $text-black: #2F3F4A;
 
+//transition
+$transition: 0.3s all ease;
+
+
 //brakepoints
 $screen: "only screen";
 $mobile-start: 320px;
@@ -26,8 +30,6 @@ $laptop-wide: "#{$screen} and (min-width: #{$laptop-wide-start})";
 $laptop-wide-only: "#{$screen} and (min-width: #{$laptop-wide-start}) and (max-width: #{$laptop-wide-end})";
 $desktop: "#{$screen} and (min-width: #{$desktop-start})";
 $desktop--only: "#{$screen} and (min-width: #{$desktop-start}) and (max-width: #{$desktop-end})";
-
 $desktop-wide: "#{$screen} and (min-width: #{$desktop-wide-screen})";
-
 $ultra: "#{$screen} and (min-width: #{$ultra-start})";
 

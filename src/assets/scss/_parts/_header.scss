@@ -3,5 +3,26 @@ header {
 
   .row {
     @include flex(center, space-between);
+    padding: 48px 0;
   }
+
+  .header-buttons {
+    @include flex(center, flex-start);
+    gap: 20px;
+
+    &__burger {
+      max-width: 104px;
+    }
+  }
+
+  .header-soc{
+    @include flex(center, flex-start);
+    gap: 20px;
+
+    &__life {
+      max-width: 142px;
+    }
+  }
+
+
 }
