@@ -24,11 +24,11 @@ $only-mobile: "#{$screen} and ( min-width: #{$mobile-start} ) and (max-width: #{
 $tablet: "#{$screen} and (min-width: #{$tablet-start})";
 $only-tablet: "#{$screen} and (min-width: #{$tablet-start}) and (max-width: #{$tablet-end})";
 $laptop: "#{$screen} and (min-width: #{$laptop-start})";
-$laptop-only: "#{$screen} and (min-width: #{$laptop-start}) and (max-width: #{$laptop-end})";
+$only-laptop: "#{$screen} and (min-width: #{$laptop-start}) and (max-width: #{$laptop-end})";
 $laptop-wide: "#{$screen} and (min-width: #{$laptop-wide-start})";
-$laptop-wide-only: "#{$screen} and (min-width: #{$laptop-wide-start}) and (max-width: #{$laptop-wide-end})";
+$only-laptop-wide: "#{$screen} and (min-width: #{$laptop-wide-start}) and (max-width: #{$laptop-wide-end})";
 $desktop: "#{$screen} and (min-width: #{$desktop-start})";
-$desktop--only: "#{$screen} and (min-width: #{$desktop-start}) and (max-width: #{$desktop-end})";
+$only-desktop: "#{$screen} and (min-width: #{$desktop-start}) and (max-width: #{$desktop-end})";
 $desktop-wide: "#{$screen} and (min-width: #{$desktop-wide-screen})";
 $ultra: "#{$screen} and (min-width: #{$ultra-start})";
 

@@ -1,16 +1,16 @@
-header {
+.header {
   min-height: 88px;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 
   @media #{$tablet} {
-    padding-bottom: 48px;
+    margin-bottom: 48px;
   }
 
   @media #{$laptop-wide} {
-    padding-bottom: 64px;
+    margin-bottom: 64px;
   }
 
-  .row {
+  &-row {
     @include flex(center, space-between);
     padding: 24px 0;
     @media #{$laptop} {
@@ -18,7 +18,7 @@ header {
     }
   }
 
-  .header-buttons {
+  &-buttons {
     display: none;
 
     @media #{$laptop-wide} {
@@ -32,10 +32,14 @@ header {
       &__burger {
         max-width: 104px;
       }
+      &__choice {
+        max-width: 207px;
+      }
+
     }
   }
 
-  .header-logo img{
+  &-logo img{
     max-height: 24px;
 
     @media #{$laptop-wide} {
@@ -43,7 +47,7 @@ header {
     }
   }
 
-  .header-soc{
+  &-soc{
     @include flex(center, flex-end);
     max-width: 235px;
     width: 100%;
@@ -108,5 +112,4 @@ header {
       }
     }
   }
-
 }

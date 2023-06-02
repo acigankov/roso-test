@@ -12,9 +12,14 @@
     <div class="page-wrapper" id="pageWrapper">
         {% include "_html/_includes/_header.html" %}
 
-        {% block content %}
-<!--            <p>Тут типа какой то блок content</p>-->
-        {% endblock %}
+        <main id="main">
+            {% block content %}
+                {% if title == "contacts" %}
+                    {% include "_html/_pages/_page-contacts.html" %}
+                {% elseif title == "Home" %}
+                {% endif %}
+            {% endblock %}
+        </main><!-- /main -->
 
         {% include "_html/_includes/_footer.html" %}
     </div>

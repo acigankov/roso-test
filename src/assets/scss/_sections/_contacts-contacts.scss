@@ -1,0 +1,178 @@
+section .contacts {
+
+  &-inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 24px;
+    @media #{$tablet} {
+      padding: 0 32px;
+    }
+    @media #{$laptop-wide} {
+      padding: 0 176px;
+    }
+    @media #{$desktop} {
+      padding: 0 216px;
+    }
+  }
+
+  &-row {
+    @include flex(flex-start, flex-start);
+    flex-wrap: wrap;
+  }
+
+  &-links {
+    flex-basis: 100%;
+    color: $accent-color;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media #{$tablet} {
+      flex-basis: auto;
+      margin-right: 32px;
+    }
+
+    @media #{$laptop-wide} {
+      font-size: 24px;
+      line-height: 120%;
+      margin-right: 64px;
+    }
+
+    a, a:link, a:visited{
+      display: block;
+      color: inherit;
+        margin-bottom: 16px;
+
+      &:hover{
+        text-decoration: none;
+        color:$text-black;
+      }
+
+      &:focus, &:active{
+        text-decoration: none;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-address {
+    flex-basis: 100%;
+    margin-bottom: 32px;
+    color: $text-black;
+
+    @media #{$tablet} {
+      flex-basis: auto;
+      margin-right: 32px;
+      margin-bottom: 0;
+    }
+
+    @media #{$laptop-wide} {
+      margin-right: 64px;
+    }
+
+    span {
+      display: block;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 160%;
+      margin-bottom: 8px;
+
+      @media #{$laptop-wide} {
+        font-size: 24px;
+      }
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 160%;
+      margin-bottom: 32px;
+
+      @media #{$laptop-wide} {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-buttons {
+    @media screen and (min-width: $tablet-start) and (max-width: $laptop-end) {
+      display: none;
+    }
+
+    @include flex(center, flex-start);
+    flex-wrap:wrap;
+    gap: 16px;
+
+    @media #{$tablet} {
+      flex-wrap:nowrap;
+    }
+
+    @media #{$only-mobile} {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btn, .btn:link, .btn:visited {
+      @include flex(center, center);
+      @include font('EuclidSquare-Medium', 16px, $text-black);
+      gap: 12px;
+      padding: 16px 24px;
+      max-width: 190px;
+
+
+      &:hover{
+        text-decoration: none;
+        color: $text-black;
+        opacity: 1;
+      }
+
+      &:focus, &:active{
+        text-decoration: none;
+        opacity: 1;
+      }
+    }
+
+    &.visible-tablets {
+      display: none;
+      @media screen and (min-width: $tablet-start) and (max-width: $laptop-end) {
+        display: flex;
+        flex-basis: 100%;
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &-worktime {
+    flex-basis: 100%;
+    margin-bottom: 32px;
+
+    @media #{$laptop-wide} {
+      flex-basis: auto;
+    }
+
+    .worktime-list {
+      font-size: 20px;
+      line-height: 160%;
+      color: $accent-color;
+
+      @media #{$laptop-wide} {
+        flex-basis: auto;
+        font-size: 24px;
+        line-height: 160%;
+      }
+
+      &__item {
+        font-size: 16px;
+        line-height: 160%;
+        color: $text-black;
+
+        @media #{$laptop-wide} {
+          flex-basis: auto;
+          font-size: 18px;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+
+}

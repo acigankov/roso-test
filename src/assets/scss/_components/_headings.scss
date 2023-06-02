@@ -1,0 +1,84 @@
+h1 {
+  font-size: 28px;
+  line-height: 120%;
+
+  @media #{$laptop-wide} {
+    font-size: 48px;
+    line-height: 120%;
+  }
+  @media #{$desktop} {
+  font-size: 64px;
+  line-height: 120%;
+  }
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 120%;
+
+  @media #{$laptop-wide} {
+    font-size: 36px;
+    line-height: 120%;
+  }
+  @media #{$desktop} {
+    font-size: 52px;
+    line-height: 120%;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 120%;
+
+  @media #{$laptop-wide} {
+    font-size: 32px;
+    line-height: 120%;
+  }
+  @media #{$desktop} {
+    font-size: 48px;
+    line-height: 120%;
+  }
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 120%;
+
+  @media #{$laptop-wide} {
+    font-size: 28px;
+    line-height: 120%;
+  }
+  @media #{$desktop} {
+    font-size: 40px;
+    line-height: 120%;
+  }
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 120%;
+
+  @media #{$laptop-wide} {
+    font-size: 24px;
+    line-height: 120%;
+  }
+  @media #{$desktop} {
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 120%;
+
+  @media #{$laptop-wide} {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  @media #{$desktop} {
+    font-size: 28px;
+    line-height: 120%;
+  }
+}
