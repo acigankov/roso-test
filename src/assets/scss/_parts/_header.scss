@@ -1,36 +1,113 @@
 header {
-  min-height: 152px;
+  min-height: 88px;
+  padding-bottom: 32px;
+
+  @media #{$tablet} {
+    padding-bottom: 48px;
+  }
+
+  @media #{$laptop-wide} {
+    padding-bottom: 64px;
+  }
 
   .row {
     @include flex(center, space-between);
-    padding: 48px 0;
+    padding: 24px 0;
+    @media #{$laptop} {
+      padding: 48px 0;
+    }
   }
 
   .header-buttons {
-    @include flex(center, flex-start);
-    gap: 16px;
+    display: none;
 
-    &__burger {
-      max-width: 104px;
+    @media #{$laptop-wide} {
+      @include flex(center, flex-start);
+      gap: 16px;
+
+      button {
+        padding: 20px 32px;
+      }
+
+      &__burger {
+        max-width: 104px;
+      }
+    }
+  }
+
+  .header-logo img{
+    max-height: 24px;
+
+    @media #{$laptop-wide} {
+      max-height: max-content;
     }
   }
 
   .header-soc{
-    @include flex(center, flex-start);
-    gap: 16px;
+    @include flex(center, flex-end);
+    max-width: 235px;
+    width: 100%;
+
+    @media #{$laptop-wide} {
+      max-width: 329px;
+    }
+
+    &__tel {
+      color: $text-black;
+      margin-right: 12px;
+      font-size: 18px;
+
+      &:hover {
+        color: $accent-color;
+        text-decoration: none;
+      }
+
+
+      @media screen and (min-width: $laptop-wide) {
+        margin-right: 0;
+      }
+
+      &.mobile {
+        @media #{$tablet} {
+          display: none;
+        }
+      }
+      &.desktop {
+        display: none;
+        @media #{$tablet} {
+          display: inline-block;
+          font-size: 18px;
+          width: 100%;
+        }
+      }
+    }
 
     &__life {
-      max-width: 142px;
+      max-width: 64px;
+      max-height: 40px;
+      padding: 16px;
+      color: $accent-color;
+      @media #{$laptop-wide} {
+        max-height: 56px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.mobile {
+        @media #{$laptop-wide} {
+          display: none;
+        }
+      }
+      &.desktop {
+        display: none;
+        @media #{$laptop-wide} {
+          display: flex;
+          max-width: 142px;
+        }
+      }
     }
   }
-
-  .header-logo {
-    display: none;
-    @media #{$laptop} {
-      display: initial;
-    }
-
-  }
-
 
 }
