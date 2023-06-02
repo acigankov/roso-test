@@ -24,5 +24,13 @@ header {
     }
   }
 
+  .header-logo {
+    display: none;
+    @media #{$laptop} {
+      display: initial;
+    }
+
+  }
+
 
 }
