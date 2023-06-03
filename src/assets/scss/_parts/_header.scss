@@ -43,7 +43,11 @@
     max-height: 24px;
 
     @media #{$laptop-wide} {
-      max-height: max-content;
+      max-height: 40px;
+    }
+
+    @media #{$desktop} {
+      max-height: 48px;
     }
   }
 

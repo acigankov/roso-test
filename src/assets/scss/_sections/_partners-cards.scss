@@ -1,4 +1,12 @@
 .partners-cards {
+  overflow: hidden;
+  margin-bottom: 32px;
+  @media #{$laptop-wide} {
+    margin-bottom: 48px;
+  }
+  @media #{$desktop} {
+    margin-bottom: 64px;
+  }
   .content-inner {
     max-width: 1920px;
     margin: 0 auto;
@@ -55,12 +63,14 @@
       flex-basis: 48%;
     }
 
+    @media #{$laptop-wide} {
+      font-size: 16px;
+    }
+
     @media #{$desktop}{
       flex-basis: 24%;
       height: auto;
     }
-
-
 
     &__number {
       @include flex();
@@ -77,6 +87,10 @@
       line-height: 140%;
       margin-bottom: 16px;
       color: rgba($text-black, 1);
+      @media #{$laptop-wide}{
+        font-size: 24px;
+      }
+
     }
 
     &__list {
