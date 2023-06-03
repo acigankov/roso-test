@@ -6,8 +6,25 @@
     @media #{$tablet} {
         padding: 0 32px;
     }
+
     @media #{$desktop} {
         padding: 0 64px;
+    }
+}
+
+.content-inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media #{$tablet} {
+        padding: 0 32px;
+    }
+    @media #{$laptop-wide} {
+        padding: 0 176px;
+    }
+    @media #{$desktop} {
+        padding: 0 216px;
     }
 }
 

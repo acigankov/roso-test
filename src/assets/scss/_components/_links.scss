@@ -5,10 +5,9 @@ a, a:visited, a:active, a:link {
 
 a:hover {
   opacity: 0.8;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:focus {
   opacity: 0.9;
-  text-decoration: underline
-;
+  text-decoration: none;
 }

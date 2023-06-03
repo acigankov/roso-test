@@ -51,6 +51,7 @@
     @include flex(center, flex-end);
     max-width: 235px;
     width: 100%;
+    gap: 24px;
 
     @media #{$laptop-wide} {
       max-width: 329px;
@@ -60,14 +61,11 @@
       color: $text-black;
       margin-right: 12px;
       font-size: 18px;
+      flex-shrink: 0;
 
       &:hover {
         color: $accent-color;
         text-decoration: none;
-      }
-
-      @media screen and (min-width: $laptop-wide) {
-        margin-right: 0;
       }
 
       &.mobile {
@@ -80,7 +78,6 @@
         @media #{$tablet} {
           display: inline-block;
           font-size: 18px;
-          width: 100%;
         }
       }
     }
