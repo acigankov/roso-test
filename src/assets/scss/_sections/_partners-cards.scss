@@ -1,0 +1,88 @@
+.partners-cards {
+  .content-inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media #{$tablet} {
+      padding: 0 32px;
+    }
+
+    @media #{$desktop} {
+      padding: 0 64px;
+    }
+  }
+
+  .swiper {
+    width: 280px;
+    height: 368px;
+    @media #{$tablet}{
+      margin-left: 0;
+      margin-right: 0;
+      overflow: initial;
+      width: auto;
+      height: auto;
+    }
+  }
+  .swiper-3d .swiper-slide-shadow {
+    background-color: transparent;
+  }
+
+  .swiper-wrapper {
+    @media #{$tablet}{
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    @media #{$desktop}{
+      flex-wrap: nowrap;
+    }
+  }
+
+
+  .cards-item {
+    border: 1px solid $accent-color;
+    border-radius: 18px;
+    padding: 24px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 160%;
+    color: rgba($text-black, 0.7);
+
+    @media #{$tablet}{
+      height: 277px;
+      flex-basis: 48%;
+    }
+
+    @media #{$desktop}{
+      flex-basis: 24%;
+      height: auto;
+    }
+
+
+
+    &__number {
+      @include flex();
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $accent-color;
+      color: $accent-color;
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 16px;
+      color: rgba($text-black, 1);
+    }
+
+    &__list {
+      list-style: disc;
+      padding-left: 24px;
+    }
+  }
+
+}
