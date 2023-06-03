@@ -32,6 +32,10 @@ body {
     @include font('EuclidSquare-Light' , 16px, $text-black);
 }
 
+img {
+    max-width: 100%; // я у мамы адаптивный, ага.
+}
+
 .page-title {
     padding-bottom: 32px;
 
