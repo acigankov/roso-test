@@ -6,28 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="{{ meta_description }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/libs/nice-select-2/dist/css/nice-select2.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css">
     <title>{{ title }}</title>
 </head>
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %} >
-        {% include "_html/_includes/_header.html" %}
+    {% include "_html/_includes/_header.html" %}
 
-        <main id="main">
-            {% block content %}
-                {% if title == "contacts" %}
-                    {% include "_html/_pages/_contacts/_page-contacts.html" %}
-                {% elseif title == "partners" %}
-                    {% include "_html/_pages/_partners/_page-partners.html" %}
-                {% elseif title == "documentation" %}
-                    {% include "_html/_pages/_documentation/_page-documentation.html" %}
-                {% endif %}
-            {% endblock %}
-        </main><!-- /main -->
+    <main id="main">
+        {% block content %}
+            {% if title == "contacts" %}
+                {% include "_html/_pages/_contacts/_page-contacts.html" %}
+            {% elseif title == "partners" %}
+                {% include "_html/_pages/_partners/_page-partners.html" %}
+            {% elseif title == "documentation" %}
+                {% include "_html/_pages/_documentation/_page-documentation.html" %}
+            {% endif %}
+        {% endblock %}
+    </main><!-- /main -->
 
-        {% include "_html/_includes/_footer.html" %}
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script src="/assets/js/custom.min.js"></script>
-
+    {% include "_html/_includes/_footer.html" %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/libs/nice-select-2/dist/js/nice-select2.js"></script>
+    <script src="/assets/js/custom.min.js"></script>
 </body>
 </html>

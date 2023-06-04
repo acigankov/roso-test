@@ -4,11 +4,12 @@
             <h1>Запрос документации</h1>
         </div><!-- /.page-title -->
 
-        <form action="/"  class="doc">
+        <form action="#" method="get" class="doc">
             <span class="doc-subtitle">Тип запрашиваемых документов</span>
 
             <div class="doc-row">
-                <select name="select" id="select" class="doc-select doc-field">
+                <select name="select" id="a-select" class="doc-select wide">
+                    <option value="none" class="hidden">Выбрать</option>
                     <option value="value1">label</option>
                     <option value="value2">label</option>
                     <option value="value3">label</option>
@@ -22,10 +23,11 @@
                 <textarea name="comment" id="comment" class="doc-field" placeholder="Комментарий"></textarea>
             </div><!-- /.doc-row -->
             <div class="doc-row doc-row_submit">
-                <submit class="btn btn_accent doc-submit" value="Отправить">Отправить</submit>
+                <button type="submit" class="btn btn_accent doc-submit" >Отправить</button>
                 <span class="doc-confirm">и принять <a href="/" class="doc-confirm__link">соглашение пользователя</a></span>
             </div><!-- /.doc-row -->
         </form><!-- /.doc -->
 
     </div><!-- /.content-inner -->
 </section><!-- /.documentation -->
+

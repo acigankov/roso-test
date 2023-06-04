@@ -24,11 +24,16 @@
       &_submit {
         align-items: center;
         justify-content: flex-start;
+        flex-wrap: nowrap;
       }
     }
 
+    &-select {
+      @include flex (center, flex-start);
+      background-color: transparent !important;
+    }
 
-    &-field {
+    &-field, .nice-select {
       flex-basis: 100%;
       margin-bottom: 16px;
       background: rgba(47, 63, 74, 0.05);
@@ -37,7 +42,6 @@
       padding: 20px;
       border: none;
       outline-color: rgba(47, 63, 74, 0.05);
-      overflow: hidden;
 
       @media #{$tablet} {
         flex-basis: 49%;
@@ -67,6 +71,54 @@
       @media #{$desktop} {
         min-height: 200px;
       }
+    }
+
+    &-select {
+      @include flex (center, flex-start);
+      background-color: transparent;
+      border: 1px solid rgba($accent-color, 0.5) !important;
+
+      .list li:first-child {
+        display: none;
+      }
+
+      &:after {
+        border-bottom: 2px solid rgba($accent-color, 0.5);
+        border-right: 2px solid rgba($accent-color, 0.5);
+        width: 10px;
+        height: 10px;
+        top: 45%;
+        right: 20px;
+      }
+
+      span {
+        font-size: 16px;
+        line-height: 120%;
+      }
+
+      &.open {
+        border-bottom-right-radius:0;
+        border-bottom-left-radius:0;
+        border-bottom: none !important;
+      }
+
+      .nice-select-dropdown {
+        border: 1px solid rgba($accent-color, 0.5);
+        border-top-right-radius:0;
+        border-top-left-radius:0;
+        margin-top: 0;
+        border-top: none !important;
+        box-shadow: none;
+        left: -1px !important;
+        right: -1px !important;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+      }
+
+      .option:hover, .option.focus, .option.selected.focus {
+        background-color: rgba($accent-color, 0.5) !important;
+      }
+
     }
 
     &-submit {
