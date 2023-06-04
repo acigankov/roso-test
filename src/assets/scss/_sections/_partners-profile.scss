@@ -31,12 +31,15 @@
         min-width: 520px;
       }
 
-
       @media #{$desktop} {
         border-top-right-radius: 0;
         border-bottom-left-radius: 48px;
         border-top-left-radius: 48px;
         min-width: 640px;
+      }
+
+      @media #{$laptop} {
+        min-width: 880px;
       }
     }
   }
