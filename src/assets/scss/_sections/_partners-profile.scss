@@ -18,20 +18,19 @@
       border-top-right-radius: 24px;
       display: block;
       height: 100%;
+      width: 100%;
       object-fit: cover;
 
       @media #{$tablet} {
         border-top-right-radius: 0;
         border-bottom-left-radius: 24px;
-        min-width: 380px;
+        min-width: 378px;
       }
 
       @media #{$laptop} {
-        min-width: 444px;
+        min-width: 520px;
       }
-      @media #{$laptop-wide} {
-        min-width: 510px;
-      }
+
 
       @media #{$desktop} {
         border-top-right-radius: 0;
@@ -43,6 +42,8 @@
   }
 
   .profile-content {
+    @include flex(flex-start, space-between);
+    flex-direction: column;
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
     background-color: $text-black;
@@ -98,6 +99,7 @@
       @include font('EuclidSquare-Medium', 16px, #fff);
       padding: 16px 36px;
       width: 100%;
+      max-width: 278px;
 
       &:hover {
        background-color: $accent-color;

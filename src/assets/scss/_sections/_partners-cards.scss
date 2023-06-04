@@ -7,19 +7,6 @@
   @media #{$desktop} {
     margin-bottom: 64px;
   }
-  .content-inner {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 24px;
-
-    @media #{$tablet} {
-      padding: 0 32px;
-    }
-
-    @media #{$desktop} {
-      padding: 0 64px;
-    }
-  }
 
   .swiper {
     width: 280px;
@@ -48,7 +35,6 @@
     }
   }
 
-
   .cards-item {
     border: 1px solid $accent-color;
     border-radius: 18px;
@@ -72,8 +58,15 @@
       height: auto;
     }
 
+    @media screen and (min-width: $tablet-end) and (max-width: $laptop-wide-end) {
+      @include flex (flex-start, flex-start);
+      gap: 20px;
+      height: 240px;
+    }
+
     &__number {
       @include flex();
+      flex-shrink: 0;
       width: 40px;
       height: 40px;
       border-radius: 50%;

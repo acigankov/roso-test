@@ -3,7 +3,7 @@
   &-description {
     margin-bottom: 32px;
 
-    @media #{$laptop-wide} {
+    @media #{$laptop} {
       margin-bottom: 48px;
       @include flex(center, space-between);
       gap: 64px;
@@ -56,7 +56,7 @@
         margin-left: -32px;
         margin-right: -32px;
       }
-      @media #{$laptop-wide} {
+      @media #{$laptop} {
         margin: 0 auto;
       }
 
