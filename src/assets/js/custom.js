@@ -6,5 +6,9 @@ if(window.innerWidth < 767) {
 }
 //selects
 const select = document.getElementById("a-select");
-NiceSelect.bind(select, {searchable: false, placeholder: 'Выбрать', searchtext: 'zoek', selectedtext: 'geselecteerd'});
-select.style.display = 'none'; //это нужно после инициалиазаци, иначе криво рисуется статчный селект
+if (select) { //чтобы работало только на нужных страницах, т.е. только там, где есть такой элемент
+    NiceSelect.bind(select, {
+        searchable: false,
+    });
+    select.style.display = 'none'; //это нужно после инициалиазаци, иначе криво рисуется статчный селект
+}
