@@ -1,0 +1,95 @@
+.documentation {
+  .doc {
+    margin-bottom: 32px;
+
+    @media #{$desktop} {
+      margin-bottom: 48px;
+    }
+
+    @media #{$ultra} {
+      margin-bottom: 64px;
+    }
+
+    &-subtitle {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 120%;
+      margin-bottom: 16px;
+    }
+
+    &-row {
+      @include flex(flex-start, space-between);
+      flex-wrap: wrap;
+
+      &_submit {
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+
+
+    &-field {
+      flex-basis: 100%;
+      margin-bottom: 16px;
+      background: rgba(47, 63, 74, 0.05);
+      border-radius: 16px;
+      min-height: 56px;
+      padding: 20px;
+      border: none;
+      outline-color: rgba(47, 63, 74, 0.05);
+      overflow: hidden;
+
+      @media #{$tablet} {
+        flex-basis: 49%;
+        margin-bottom: 24px;
+      }
+
+      @media #{$desktop} {
+        flex-basis: 23%;
+        margin-bottom: 32px;
+      }
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 120%;
+        color: rgba($text-black, 0.5);
+      }
+    }
+
+    textarea {
+      resize: none;
+      min-height: 120px;
+
+      @media #{$tablet} {
+        flex-basis: 49%;
+      }
+
+      @media #{$desktop} {
+        min-height: 200px;
+      }
+    }
+
+    &-submit {
+      max-width: 207px;
+      margin-right: 16px;
+      height: 56px;
+      padding: 20px 32px;
+    }
+
+    &-confirm {
+      font-size: 12px;
+      line-height: 110%;
+
+
+      &__link, &__link:visited, {
+        color: $accent-color;
+
+        &:hover, &:active {
+          opacity: 0.7;
+        }
+      }
+    }
+
+
+  }
+}

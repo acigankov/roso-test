@@ -1,8 +1,7 @@
 .btn {
-  display: flex;
+  @include flex(center, center);
+  @include font('EuclidSquare-Medium', 16px, #fff);
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   flex-grow: 0;
   flex-shrink: 0;
   width: 100%;
