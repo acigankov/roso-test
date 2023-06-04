@@ -32,6 +32,7 @@
 }
 body {
     @include font('EuclidSquare-Light' , 16px, $text-black);
+    position: relative;
 }
 
 img {

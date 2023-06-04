@@ -38,7 +38,7 @@
         min-width: 640px;
       }
 
-      @media #{$laptop} {
+      @media #{$ultra} {
         min-width: 880px;
       }
     }
