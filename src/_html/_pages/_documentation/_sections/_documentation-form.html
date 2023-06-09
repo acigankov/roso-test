@@ -4,11 +4,11 @@
             <h1>Запрос документации</h1>
         </div><!-- /.page-title -->
 
-        <form action="#" method="get" class="doc">
+        <form action="#" method="get" class="doc form-validation">
             <span class="doc-subtitle">Тип запрашиваемых документов</span>
 
             <div class="doc-row">
-                <select name="select" id="a-select" class="doc-select wide">
+                <select name="select" id="a-select" class="doc-select field-select need-validate wide">
                     <option value="none" class="hidden"  >Выбрать</option>
                     <option value="value1">label</option>
                     <option value="value2">label</option>
@@ -16,11 +16,11 @@
                     <option value="value4">label</option>
                     <option value="value5">label</option>
                 </select>
-                <input type="text" class="doc-field" name="name" placeholder="ФИО">
-                <input type="text" class="doc-field" name="tel" placeholder="Телефон">
-                <input type="text" class="doc-field" name="email" placeholder="E-mail">
-                <textarea name="ddu" id="ddu" class="doc-field" placeholder="Номер квартиры (по ДДУ)"></textarea>
-                <textarea name="comment" id="comment" class="doc-field" placeholder="Комментарий"></textarea>
+                <input type="text" class="doc-field field-name need-validate" name="name" placeholder="ФИО">
+                <input type="tel" class="doc-field field-tel need-validate" name="tel" placeholder="Телефон">
+                <input type="text" class="doc-field field-email need-validate" name="email" placeholder="E-mail">
+                <textarea name="ddu" id="ddu" class="doc-field field-ddu" placeholder="Номер квартиры (по ДДУ)"></textarea>
+                <textarea name="comment" id="comment" class="doc-field field-comment" placeholder="Комментарий"></textarea>
             </div><!-- /.doc-row -->
             <div class="doc-row doc-row_submit">
                 <button type="submit" class="btn btn_accent doc-submit" >Отправить</button>
