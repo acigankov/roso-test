@@ -9,6 +9,7 @@
 
     .controls-list {
       @include flex(center, center);
+      gap: 5px;
       padding: 8px;
       height: 72px;
       background: #FFFFFF;
