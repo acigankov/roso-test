@@ -1,106 +1,106 @@
-const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-
 const form = document.querySelector('.form-validation');
-const fields = form.querySelectorAll('.need-validate');
-const emailName = form.querySelector('.field-name');
-const emailField = form.querySelector('.field-email');
-const telField = form.querySelector('.field-tel');
-const selectFieldCurrent = form.querySelector('.nice-select span.current ');
+if (form) { //чтобы работало только на нужных страницах, т.е. только там, где есть такой элемент
 
-function isEmailValid(value) {
-    return EMAIL_REGEXP.test(value);
-}
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    const fields = form.querySelectorAll('.need-validate');
+    const selectFieldCurrent = form.querySelector('.nice-select span.current ');
 
-function checkValidate(fields) {
-   // return (!field.classList.contains('has-error'));
-
-    let errors = [];
-    fields.forEach(function (item) {
-        if(item.classList.contains('has-error')) {
-            errors.push(item.index);
-        }
-    })
-
-    return (!errors.length > 0);
-}
-
-function checkEmail (field) {
-    if(isEmailValid(field.value)) {
-        field.classList.remove('has-error');
-    } else {
-        field.classList.add('has-error');
+    function isEmailValid(value) {
+        return EMAIL_REGEXP.test(value);
     }
-}
 
-function checkTel (field) {
-    if (field.value.length === 17) {
-        field.classList.remove('has-error');
-    } else {
-        field.classList.add('has-error');
+    function checkValidate(fields) {
+        // return (!field.classList.contains('has-error'));
+
+        let errors = [];
+        fields.forEach(function (item) {
+            if (item.classList.contains('has-error')) {
+                errors.push(item.index);
+            }
+        })
+
+        return (!errors.length > 0);
     }
-}
 
-function checkSelect () {
-    //немножечко колхоза, т.к. селект у нас осообенный
-    if(selectFieldCurrent.innerHTML === 'Выбрать') {
-        selectFieldCurrent.parentElement.classList.add('has-error');
-    } else {
-        selectFieldCurrent.parentElement.classList.remove('has-error');
+    function checkEmail(field) {
+        if (isEmailValid(field.value)) {
+            field.classList.remove('has-error');
+        } else {
+            field.classList.add('has-error');
+        }
     }
-}
 
-function checkEmpty (field) {
-    if (field.value) {
-        field.classList.remove('has-error');
-    } else {
-        field.classList.add('has-error');
+    function checkTel(field) {
+        if (field.value.length === 17) {
+            field.classList.remove('has-error');
+        } else {
+            field.classList.add('has-error');
+        }
     }
-}
 
-//live check
-const observer = new MutationObserver(() => {
-    checkSelect();
-});
-observer.observe(selectFieldCurrent, { subtree: true, childList: true });
-
-fields.forEach(function (item) {
-    item.addEventListener('keyup', function () {
-        checkEmpty(item);
-
-        if(item.classList.contains('field-email')) {
-            checkEmail(item);
+    function checkSelect() {
+        //немножечко колхоза, т.к. селект у нас осообенный
+        if (selectFieldCurrent.innerHTML === 'Выбрать') {
+            selectFieldCurrent.parentElement.classList.add('has-error');
+        } else {
+            selectFieldCurrent.parentElement.classList.remove('has-error');
         }
+    }
 
-        if(item.classList.contains('field-tel')) {
-            checkTel(item);
+    function checkEmpty(field) {
+        if (field.value) {
+            field.classList.remove('has-error');
+        } else {
+            field.classList.add('has-error');
         }
+    }
 
-    });
-});
-
-//onsubmit check
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    let errors = [];
-
-    fields.forEach(function (item) {
-        checkEmpty(item);
-
-        if(item.classList.contains('field-email')) {
-            checkEmail(item);
-        }
-
-        if(item.classList.contains('field-tel')) {
-            checkTel(item);
-        }
-
+    //live check
+    const observer = new MutationObserver(() => {
         checkSelect();
+    });
+    observer.observe(selectFieldCurrent, {subtree: true, childList: true});
 
+    fields.forEach(function (item) {
+        item.addEventListener('keyup', function () {
+            checkEmpty(item);
+
+            if (item.classList.contains('field-email')) {
+                checkEmail(item);
+            }
+
+            if (item.classList.contains('field-tel')) {
+                checkTel(item);
+            }
+
+        });
     });
 
-    //if all fields ok - fires submit
-    if(checkValidate(fields)) {
-        form.submit();
-    }
-});
+    //onsubmit check
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        let errors = [];
+
+        fields.forEach(function (item) {
+            checkEmpty(item);
+
+            if (item.classList.contains('field-email')) {
+                checkEmail(item);
+            }
+
+            if (item.classList.contains('field-tel')) {
+                checkTel(item);
+            }
+
+            checkSelect();
+
+        });
+
+        //if all fields ok - fires submit
+        if (checkValidate(fields)) {
+            form.submit();
+        }
+    });
+
+}
